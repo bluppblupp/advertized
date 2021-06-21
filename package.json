@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "scripts": {
+    "client:build": "cd client && npm run build",
+    "server:start": "cd server && npm run start",
+    "start": "npm run client:build && npm run server:start",
+    "client:install": "cd client && npm install",
+    "server:install": "cd server && npm install",
+    "install": "npm run client:install && npm run server:install",
+    "client:lint": "cd client && npm run lint",
+    "server:lint": "cd server && npm run lint",
+    "lint": "npm run client:lint && npm run server:lint",
+    "client:lint:fix": "cd client && npm run lint:fix",
+    "server:lint:fix": "cd server && npm run lint:fix",
+    "lint:fix": "npm run client:lint:fix && npm run server:lint:fix"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "firebase": "^8.6.2",
+    "json-parse-better-errors": "^1.0.2",
+    "json-parse-even-better-errors": "^2.3.1",
+    "request": "^2.88.2",
+    "sqlite3": "^5.0.2"
+  }
+}
