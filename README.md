@@ -2,7 +2,7 @@
 
 <p align="center">Advertizement Page for Course DD1389 at KTH</p>
 
-<p> Run Npm Install & Npm Start in both /Client and /Server to start the project!
+<p align="center"> Run Npm Install & Npm Start in both /Client and /Server to start the project!
 
 ## Built With
 
