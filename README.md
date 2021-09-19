@@ -1,9 +1,9 @@
-<h1 align="center">Advertized</h1>
+<h1 align="left">Advertized</h1>
 
-<p align="center">Advertizement Page for Course DD1389 at KTH</p>
+<p align="left">Advertizement Page for Course DD1389 at KTH</p>
 
-<p align="center"> Run Npm Install & Npm Start in both /Client and /Server to start the project!
-<p align="center">
+<p align="left"> Run Npm Install & Npm Start in both /Client and /Server to start the project!
+
 ## Built With
 
 - JavaScript
@@ -12,5 +12,4 @@
 - Vue
 - SQLITE3
 - BOOTSTRAP
-  
- </p>
+
