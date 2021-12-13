@@ -9,7 +9,6 @@
 
 - JavaScript
 - Node
-- NPM
 - Vue
 - SQLITE3
 - BOOTSTRAP
