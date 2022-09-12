@@ -7,13 +7,12 @@ import ProfileView from '../views/Profile.vue';
 import SignupView from '../views/Signup.vue';
 import store from '../store';
 
-
 Vue.use(VueRouter);
 
 const routes = [
   { path: '/', redirect: '/index' },
   { path: '/index', component: IndexView },
-  { path: '/adverts/:advert', component: AdvertView },
+  { path: '/adverts/:advertName', component: AdvertView },
   { path: '/login', component: LoginView },
   { path: '/profile', component: ProfileView },
   { path: '/signup', component: SignupView },

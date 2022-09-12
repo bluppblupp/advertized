@@ -1,5 +1,5 @@
-const Advert = require('./models/advert.model');
-const User = require('./models/user.model');
+const Advert = require("./models/advert.model");
+const User = require("./models/user.model");
 
 /**
  * adverts & users are effectively hash maps with the name of the entry serving as a unique key.
@@ -42,11 +42,13 @@ const assignUnregisteredSocket = (socketID) => {
   const socket = unregisteredSockets[socketID];
   unregisteredSockets = Object.keys(unregisteredSockets)
     .filter((sockID) => sockID !== socketID)
-    .reduce((res, sockID) => ({ ...res, [sockID]: unregisteredSockets[sockID] }), {});
+    .reduce(
+      (res, sockID) => ({ ...res, [sockID]: unregisteredSockets[sockID] }),
+      {}
+    );
 
   return socket;
 };
-
 
 /**
  * Creates a user with the given name.
@@ -57,7 +59,7 @@ const assignUnregisteredSocket = (socketID) => {
  */
 exports.addUser = (name, socketID = undefined) => {
   users[name] = new User(name);
-  console.log('adding user:');
+  console.log("adding user:");
   if (socketID !== undefined) {
     users[name].socket = assignUnregisteredSocket(socketID);
     users[name].socketID = socketID;
@@ -66,7 +68,7 @@ exports.addUser = (name, socketID = undefined) => {
 };
 
 exports.findUserSocket = (name) => {
-  console.log('user socket:');
+  console.log("user socket:");
   const socket = users[name].socketID;
   return socket;
 };
@@ -111,7 +113,7 @@ exports.addAdvert = (time, admin) => {
 
 /**
  * Returns all the adverts.
- * @returns {advert[]}
+ * @returns {adverts[]}
  */
 exports.getAdverts = () => Object.values(adverts);
 
@@ -129,6 +131,6 @@ exports.removeAdvert = (name) => {
 /**
  * Return the advert object with the matching name.
  * @param {String} name - The name of the advert.
- * @returns {advert}
+ * @returns {Advert}
  */
 exports.findAdvert = (name) => adverts[name];
