@@ -54,7 +54,7 @@ router.post("/advertListCategory", (req, res) => {
       throw err;
     }
     rows.forEach((row) => {
-      if (row.item === req.body.search || req.body.search === null) {
+      if (row.item.includes(req.body.search) || req.body.search === null) {
         if (row.category === req.body.category || req.body.category === "All") {
           advertsDBCategory.push(row);
         }
